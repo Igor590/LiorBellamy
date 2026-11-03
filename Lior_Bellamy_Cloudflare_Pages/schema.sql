@@ -1,7 +1,0 @@
-CREATE TABLE IF NOT EXISTS guestbook (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  request_key TEXT NOT NULL UNIQUE,
-  nickname TEXT NOT NULL CHECK (length(nickname) BETWEEN 1 AND 32),
-  message TEXT NOT NULL DEFAULT '' CHECK (length(message) <= 360),
-  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
